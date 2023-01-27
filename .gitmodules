@@ -5,3 +5,6 @@
 [submodule "lib/ds-compare"]
 	path = lib/ds-compare
 	url = https://github.com/lukehamilton/ds-compare
+[submodule "lib/geb-tx-manager"]
+	path = lib/geb-tx-manager
+	url = https://github.com/lukehamilton/geb-tx-manager
