@@ -1,0 +1,331 @@
+{
+  "description": "Rinkeby deployment",
+  "import": {
+    "esm_threshold_setter": "0x0000000000000000000000000000000000000000",
+    "uniswap_factory": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
+    "uniswap_router": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+  },
+  "deploy_keeper_flash_proxies": "1",
+  "uniswap": {
+    "coin_to_deposit_pool": "255",
+    "coin_borrow_c_ratio": "300",
+    "coin_token_profile_index": "0"
+  },
+  "printing_permissions": {
+    "deploy": "1",
+    "unrevokableRightsCooldown": "1209600",
+    "denyRightsCooldown": "1209600",
+    "addRightsCooldown": "86400"
+  },
+  "incentives": {
+    "deploy": "1"
+  },
+  "safe_scenario": {
+    "type": "NULL",
+    "collateral_amount": "0.5",
+    "liquidate": "true",
+    "safe_count": "3"
+  },
+  "safe_scenario": {
+    "type": "LOW",
+    "collateral_amount": "0.5",
+    "liquidate": "true",
+    "safe_count": "3",
+    "bid": "true",
+    "trigger_debt_auction": "true"
+  },
+  "protocol_token": {
+    "deploy": "0",
+    "symbol": "FLX",
+    "name": "Flex Protocol Token",
+    "type": "Delegate",
+    "oracle_deploy": {
+      "deploy": "0",
+      "type": "GovernanceLed",
+      "fsm_addr": "",
+      "median_addr": "",
+      "integration": "",
+      "quorum": "1",
+      "fsm_delay": "3600",
+      "strategy": "value",
+      "sub_strategy": "",
+      "price": "100",
+      "dsm_deviation": "0.90",
+      "chainlink": {
+        "base_caller_reward": "0",
+        "period_size": "3600",
+        "max_caller_reward": "10",
+        "reward_increase": "100",
+        "reward_increase_timeline": "3600",
+        "max_reward_increase_delay": "10800"
+      },
+      "uniswap": {
+        "denomination_token_symbol": "ETH",
+        "denomination_token_address": "0xc778417e063141139fce010982780140aa0cd5ab",
+        "default_amount_in": "1000000000000000000",
+        "window_size": "1209600",
+        "max_window_size": "1814400",
+        "converter_feed_scaling_factor": "1000000000000000000",
+        "granularity": "168",
+        "base_caller_reward": "0",
+        "max_caller_reward": "10",
+        "reward_increase": "100",
+        "reward_increase_timeline": "3600",
+        "max_reward_increase_delay": "10800"
+      },
+      "signers": [
+        "0xfc5c3a40bc9b8ad5d179036f5489c573c9d91c7f"
+      ]
+    }
+  },
+  "pause": {
+    "type": "PROTEST",
+    "set_owner": "1",
+    "pause_delay": "0",
+    "protester_lifetime": "47304000",
+    "delay_multiplier": "3"
+  },
+  "safe_engine": {
+    "global_debt_ceiling": "10200",
+    "safe_debt_ceiling": "255"
+  },
+  "ds_vote_quorum": {
+    "max_candidates_per_ballot": "5"
+  },
+  "iou": {
+    "symbol": "FLX-IOU-1"
+  },
+  "accounting_engine": {
+    "pop_debt_delay": "1036800",
+    "surplus_auction_delay": "0",
+    "initial_debt_auction_minted_tokens": "252",
+    "debt_auction_bid_size": "50000",
+    "surplus_auction_amount_to_sell": "6000",
+    "surplus_buffer": "300000",
+    "disable_cooldown": "2678400"
+  },
+  "liquidation_engine": {
+    "on_auction_system_coin_limit": "2000"
+  },
+  "tax_collector": {
+    "global_stability_fee": "0",
+    "max_secondary_receivers": "3"
+  },
+  "coin_savings_account": {
+    "savings_rate": "0"
+  },
+  "global_settlement": {
+    "shutdown_cooldown": "7200"
+  },
+  "esm": {
+    "trigger_threshold": "80000"
+  },
+  "esm_threshold_setter": {
+    "deploy": "0"
+  },
+  "surplus_auction_house": {
+    "type": "burning",
+    "bid_change": "3",
+    "bid_duration": "3600",
+    "total_auction_length": "259200"
+  },
+  "debt_auction_house": {
+    "bid_change": "3",
+    "amount_sold_increase": "20",
+    "bid_duration": "1800",
+    "total_auction_length": "259200"
+  },
+  "governance": {
+    "type": "MULTISIG-BASIC",
+    "voting": {},
+    "multisig": {
+      "owners": [],
+      "quorum": "1"
+    }
+  },
+  "oracle_relayer": {
+    "redemption_rate_upper_bound": "1000000051034942716352291303",
+    "redemption_rate_lower_bound": "999992004944832172372204125",
+    "redemption_price": "3.14",
+    "redemption_rate": "0"
+  },
+  "single_ceiling_setter": {
+    "deploy": "1",
+    "base_caller_reward": "0",
+    "max_caller_reward": "10",
+    "reward_increase": "100",
+    "reward_increase_timeline": "3600",
+    "max_reward_increase_delay": "10800",
+    "update_delay": "3600",
+    "ceiling_percentage_change": "130",
+    "max_collateral_ceiling": "-1",
+    "min_collateral_ceiling": "20000000",
+    "last_update_time": "2840140800",
+    "manual_setters": [
+      "0x005B903dAdfD96229CBa5EB0e5Aa75C578e8F968",
+      "0x005B903dAdfD96229CBa5EB0e5Aa75C578e8F968"
+    ]
+  },
+  "stability_fee_treasury": {
+    "deploy": "1",
+    "pull_funds_min_threshold": "100000",
+    "surplus_transfer_delay": "604800",
+    "expenses_multiplier": "2",
+    "treasury_capacity": "200000",
+    "minimum_funds_required": "5"
+  },
+  "redemption_rate_setter": {
+    "deploy": "1",
+    "base_caller_reward": "0",
+    "max_caller_reward": "10",
+    "reward_increase": "100",
+    "reward_increase_timeline": "3600",
+    "max_reward_increase_delay": "10800",
+    "update_rate_delay": "3600"
+  },
+  "redemption_rate_calculator": {
+    "base_type": "PI",
+    "sub_type": "RawPerSecond",
+    "nb": "1000000000000000000",
+    "ag": "0",
+    "sg": "0",
+    "pscl": "1000000000000000000000000000",
+    "ps": "3600",
+    "ips": "3600",
+    "foub": "1000000000000000000000000000000000000000000000",
+    "folb": "-999999999999999999999999999",
+    "imported_state": [
+      0, 0, 0, 0, 0
+    ],
+    "data_readers": []
+  },
+  "protocol_token_holders": {
+    "amounts": [
+      "1000000"
+    ],
+    "holders": []
+  },
+  "coin": {
+    "type": "INDEX",
+    "name": "Rai Reflex Index",
+    "symbol": "RAI",
+    "oracle_deploy": {
+      "type": "GovernanceLed",
+      "fsm_addr": "",
+      "median_addr": "",
+      "integration": "",
+      "quorum": "1",
+      "fsm_delay": "3600",
+      "fsm_deploy": "1",
+      "strategy": "value",
+      "sub_strategy": "",
+      "price": "3.14",
+      "dsm_deviation": "0.90",
+      "chainlink": {
+        "base_caller_reward": "0",
+        "period_size": "3600",
+        "max_caller_reward": "10",
+        "reward_increase": "100",
+        "reward_increase_timeline": "3600",
+        "max_reward_increase_delay": "10800"
+      },
+      "uniswap": {
+        "denomination_token_symbol": "ETH",
+        "denomination_token_address": "0xc778417e063141139fce010982780140aa0cd5ab",
+        "default_amount_in": "1000000000000000000",
+        "window_size": "43200",
+        "max_window_size": "64800",
+        "converter_feed_scaling_factor": "1000000000000000000",
+        "granularity": "12",
+        "base_caller_reward": "0",
+        "max_caller_reward": "10",
+        "reward_increase": "100",
+        "reward_increase_timeline": "3600",
+        "max_reward_increase_delay": "10800"
+      },
+      "signers": [
+        "0xfc5c3a40bc9b8ad5d179036f5489c573c9d91c7f"
+      ]
+    },
+    "spot_oracle_deploy": {
+        "type": "UniswapConsecutiveSlots",
+        "fixed_discount_oracle_type": "spot",
+        "spot_addr": "",
+        "fsm_addr": "",
+        "integration": "",
+        "quorum": "1",
+        "fsm_delay": "3600",
+        "strategy": "median",
+        "price": "3.14",
+        "uniswap": {
+          "denomination_token_symbol": "ETH",
+          "denomination_token_address": "",
+          "default_amount_in": "1000000000000000000",
+          "window_size": "7200",
+          "max_window_size": "14400",
+          "converter_feed_scaling_factor": "1000000000000000000",
+          "granularity": "2",
+          "base_caller_reward": "0",
+          "max_caller_reward": "10",
+          "reward_increase": "100",
+          "reward_increase_timeline": "3600",
+          "max_reward_increase_delay": "10800"
+        },
+        "signers": [
+          "0x005B903dAdfD96229CBa5EB0e5Aa75C578e8F968"
+        ]
+    }
+  },
+  "tokens": {
+    "ETH": {
+      "oracle_deploy": {
+        "import": {
+          "token_address": "0xc778417e063141139fce010982780140aa0cd5ab"
+        },
+        "type": "GovernanceLed",
+        "quorum": "1",
+        "fsm_delay": "3600",
+        "strategy": "value",
+        "sub_strategy": "",
+        "price": "341",
+        "dsm_deviation": "0.90",
+        "base_caller_reward": "0",
+        "max_caller_reward": "10",
+        "period_size": "3600",
+        "reward_increase": "100",
+        "reward_increase_timeline": "3600",
+        "max_reward_increase_delay": "10800",
+        "signers": [
+          "0xfc5c3a40bc9b8ad5d179036f5489c573c9d91c7f"
+        ]
+      },
+      "collateral_types": {
+        "A": {
+          "auction_type": "FIXED_DISCOUNT",
+          "minimum_bid": "5",
+          "fixed_discount": "0.95",
+          "lower_collateral_median_deviation": "0.80",
+          "upper_collateral_median_deviation": "0.80",
+          "lower_system_coin_median_deviation": "1",
+          "upper_system_coin_median_deviation": "1",
+          "min_system_coin_median_deviation": "0.999",
+          "safety_c_ratio": "150",
+          "liquidation_c_ratio": "150",
+          "debt_ceiling": "10200",
+          "debt_floor": "100",
+          "stability_fee": "1.5",
+          "liquidation_penalty": "11",
+          "liquidation_quantity": "50000",
+          "bid_change": "3",
+          "bid_duration": "3600",
+          "total_auction_length": "172800",
+          "treasury_fee_portion": "50",
+          "secondary_tax_receivers": {
+            "percentages": [],
+            "accounts": []
+          }
+        }
+      }
+    }
+  }
+}
