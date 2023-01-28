@@ -8,3 +8,6 @@
 [submodule "lib/geb-tx-manager"]
 	path = lib/geb-tx-manager
 	url = https://github.com/lukehamilton/geb-tx-manager
+[submodule "lib/geb-deploy"]
+	path = lib/geb-deploy
+	url = https://github.com/lukehamilton/geb-deploy
