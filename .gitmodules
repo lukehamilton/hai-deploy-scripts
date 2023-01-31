@@ -17,3 +17,6 @@
 [submodule "lib/ds-value"]
 	path = lib/ds-value
 	url = https://github.com/lukehamilton/ds-value
+[submodule "lib/geb-fsm"]
+	path = lib/geb-fsm
+	url = https://github.com/lukehamilton/geb-fsm
