@@ -13,7 +13,7 @@ ds-spell/=lib/geb-deploy/lib/ds-pause/lib/ds-spell/src/
 ds-guard/=lib/geb-deploy/lib/ds-guard/src/
 ds-value/=lib/geb-deploy/lib/ds-value/src/
 ds-test/=lib/geb-deploy/lib/ds-value/lib/ds-test/src/
-ds-thing/=lib/geb-deploy/lib/ds-value/lib/ds-thing/src/
+ds-thing/=lib/ds-thing/src
 ds-note/=lib/geb-deploy/lib/ds-value/lib/ds-thing/lib/ds-note/src
 
 geb-tx-manager/=lib/geb-tx-manager/src/
