@@ -5,6 +5,7 @@ ds-compare/=lib/ds-compare/src/
 geb-deploy/=lib/geb-deploy/src/
 
 ds-pause/=lib/geb-deploy/lib/ds-pause/src/
+ds-math/=lib/geb-deploy/lib/ds-pause/lib/ds-vote-quorum/lib/ds-token/lib/ds-math/src
 ds-proxy/=lib/geb-deploy/lib/ds-pause/lib/ds-proxy/src/
 ds-roles/=lib/geb-deploy/lib/ds-pause/lib/ds-vote-quorum/lib/ds-roles/src/
 ds-spell/=lib/geb-deploy/lib/ds-pause/lib/ds-spell/src/
