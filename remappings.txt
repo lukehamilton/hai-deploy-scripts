@@ -1,6 +1,7 @@
 forge-std/=lib/forge-std/src/
 
 ds-compare/=lib/ds-compare/src/
+ds-math/=lib/ds-math/src/
 
 geb-deploy/=lib/geb-deploy/src/
 
