@@ -23,3 +23,6 @@
 [submodule "lib/ds-math"]
 	path = lib/ds-math
 	url = https://github.com/lukehamilton/ds-math
+[submodule "lib/ds-thing"]
+	path = lib/ds-thing
+	url = https://github.com/lukehamilton/ds-thing
