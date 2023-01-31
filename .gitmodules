@@ -14,3 +14,6 @@
 [submodule "lib/geb-uniswap-median"]
 	path = lib/geb-uniswap-median
 	url = https://github.com/lukehamilton/geb-uniswap-median
+[submodule "lib/ds-value"]
+	path = lib/ds-value
+	url = https://github.com/lukehamilton/ds-value
