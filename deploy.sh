@@ -263,8 +263,22 @@ export CONFIG_FILE=./config/testchain-value/testchain-value-english-governance-m
 
 # export SURPLUS_AUCTION_HOUSE_TYPE
 
+# median_coin_addr=$(jq -r ".coin | .oracle_deploy | .median_addr | values" "$CONFIG_FILE")
+
+teststr="x"
+
+if [ -z "$teststr" ]; then
+    printf "is empty"
+else
+    printf "is full"
+fi
+
+echo
 
 printf  "$CONFIG_FILE"
+echo
+echo
+# printf "$median_coin_addr"
 
 # echo
 # echo
